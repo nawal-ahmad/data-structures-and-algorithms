@@ -4,4 +4,5 @@
 
 | code                | Link                                                                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| array reverse       | [array-reverse](/home/nawal/401/data-structures-and-algorithms1/java/code_challenges/array-reverse/README.md)             |
+| array reverse       | [array-reverse](code_challenges/array-reverse/README.md)             |
+| array insert shift  | [array-insert-shift](code_challenges/array-insert-shift/README.md)             |
