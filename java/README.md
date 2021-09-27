@@ -4,4 +4,4 @@
 
 | code                | Link                                                                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| reverse             | [array-reverse](/home/nawal/401/data-structures-and-algorithms/java/code_challenges/reverse_linked_list.py)             |
+| array reverse       | [array-reverse](/home/nawal/401/data-structures-and-algorithms1/java/code_challenges/array-reverse/README.md)             |
