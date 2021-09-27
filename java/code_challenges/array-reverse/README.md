@@ -1,4 +1,4 @@
-# Insert to Middle of an Array
+# Array Reverse
 
 A function that takes an array and return a new array with elements in reversed order.
 
