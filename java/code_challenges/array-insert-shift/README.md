@@ -11,5 +11,5 @@ I used a for loop approach to solve this problem.
 
 - The big O notion: 
 Time : O(n) 
-Space : O(1)
+Space : O(n)
 
