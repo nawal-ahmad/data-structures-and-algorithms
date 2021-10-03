@@ -4,6 +4,11 @@ import linked.list.data.Node;
 
 public class LinkedList {
   private Node head;
+  private int size = 0;
+
+  public int size() {
+    return size;
+  }
 
   public LinkedList() {
 
@@ -15,6 +20,7 @@ public class LinkedList {
       newNode.setNext(head);
     }
     head = newNode;
+    size++;
   }
 
   public boolean includes(String value) {
@@ -40,6 +46,20 @@ public class LinkedList {
     }
     printResult += "Null";
     return printResult;
+  }
+  public void append(String value) {
+    Node newNode = new Node(value);
+
+    if (size == 0) {
+      head = newNode;
+    } else {
+      Node current = head;
+      while (current.getNext() != null) {
+        current = current.getNext();
+      }
+      current.setNext(newNode);
+    }
+    size++;
   }
 
 }

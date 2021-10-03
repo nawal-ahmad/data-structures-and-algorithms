@@ -10,6 +10,7 @@ class LibraryTest {
   @Test void linkedListTest (){
     LinkedList first = new LinkedList();
     // empty linked list
+
     assertEquals("Null" , first.toString());
 
     // insert into the linked list
@@ -18,7 +19,7 @@ class LibraryTest {
     // head point to the first node in the linked list
     assertEquals("{ H } -> Null" , first.toString());
 
-    //nsert multiple nodes into the linked list
+    //Insert multiple nodes into the linked list
     first.insert("E");
     first.insert("L");
     first.insert("L");
@@ -29,6 +30,7 @@ class LibraryTest {
     assertFalse(first.includes("M"));
     //finding a value within the linked list that exists
     assertTrue(first.includes("L"));
+
 
     //return a collection of all the values that exist in the linked list
     assertEquals("{ O } -> { L } -> { L } -> { E } -> { H } -> Null" , first.toString());
