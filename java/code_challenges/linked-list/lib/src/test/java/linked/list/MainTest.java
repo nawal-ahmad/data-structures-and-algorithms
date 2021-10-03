@@ -3,11 +3,37 @@
  */
 package linked.list;
 
+import linked.list.structure.LinkedList;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Main classUnderTest = new Main();
-    }
-}
+  @Test void linkedListTest (){
+    LinkedList first = new LinkedList();
+    // empty linked list
+    assertEquals("Null" , first.toString());
+
+    // insert into the linked list
+    first.insert("H");
+    assertTrue(first.includes("H"));
+    // head point to the first node in the linked list
+    assertEquals("{ H } -> Null" , first.toString());
+
+    //nsert multiple nodes into the linked list
+    first.insert("E");
+    first.insert("L");
+    first.insert("L");
+    first.insert("O");
+    assertEquals("{ O } -> { L } -> { L } -> { E } -> { H } -> Null" , first.toString());
+
+    // return false when searching for a value in the linked list that does not exist
+    assertFalse(first.includes("M"));
+    //finding a value within the linked list that exists
+    assertTrue(first.includes("L"));
+
+    //return a collection of all the values that exist in the linked list
+    assertEquals("{ O } -> { L } -> { L } -> { E } -> { H } -> Null" , first.toString());
+
+  }}
+
+
+

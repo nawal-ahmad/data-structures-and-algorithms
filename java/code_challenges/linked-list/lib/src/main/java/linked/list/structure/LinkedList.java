@@ -41,6 +41,7 @@ public class LinkedList {
     printResult += "Null";
     return printResult;
   }
+
 }
 
 //  public void printList() {
