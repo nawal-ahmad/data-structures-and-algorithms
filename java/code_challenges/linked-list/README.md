@@ -28,3 +28,26 @@ Big O space = O(1)
 insert : adding nodes to the linked list.
 includes : checking for a specific value if it exist in the linked list.
 toString : adding the values in a String variable to be printed.
+
+
+
+# Linked List Insertion
+
+# Challenge Summary
+Add three methods:
+- **append** : add a node to the end of the linked list.
+- **insertBefore** : insert a node before another node.
+- **insertAfter** :  insert a node after another node.
+
+## Approach & Efficiency
+> append :
+- Time : big O(1)
+-  space: big O(1).
+
+> insertBefore:
+- Time : big O(n).
+- space: big O(1).
+
+> insertAfter:
+- Time : big O(n).
+- space: big O(1).

@@ -2,6 +2,8 @@ package linked.list.structure;
 
 import linked.list.data.Node;
 
+import java.util.Objects;
+
 public class LinkedList {
   private Node head;
   private int size = 0;
@@ -13,7 +15,6 @@ public class LinkedList {
   public LinkedList() {
 
   }
-
   public void insert(String value) {
     Node newNode = new Node(value);
     if (head != null) {
@@ -47,10 +48,10 @@ public class LinkedList {
     printResult += "Null";
     return printResult;
   }
+
   public void append(String value) {
     Node newNode = new Node(value);
-
-    if (size == 0) {
+    if (head == null) {
       head = newNode;
     } else {
       Node current = head;
@@ -62,6 +63,36 @@ public class LinkedList {
     size++;
   }
 
+  public void insertBefore(String value, String newValue) {
+    if (includes(value)) {
+      Node newNode = new Node(newValue);
+      Node current = head;
+      Node previous = head;
+
+      while (Objects.equals(previous.getNext().getValue(), value)) {
+        previous = previous.getNext();
+      }
+      current = previous.getNext();
+      previous.setNext(newNode);
+      newNode.setNext(current);
+      size++;
+    }
+  }
+
+  public void insertAfter(String value, String newValue) {
+    if (includes(value)) {
+      Node newNode = new Node(newValue);
+      Node current = head;
+      Node previous = head;
+      while (!Objects.equals(previous.getValue(), value)) {
+        previous = previous.getNext();
+      }
+      current = previous.getNext();
+      previous.setNext(newNode);
+      newNode.setNext(current);
+      size++;
+    }
+  }
 }
 
 //  public void printList() {

@@ -10,11 +10,13 @@ class LibraryTest {
   @Test void linkedListTest (){
     LinkedList first = new LinkedList();
     // empty linked list
-
+    assertEquals(first.size(),0);
     assertEquals("Null" , first.toString());
 
     // insert into the linked list
     first.insert("H");
+    assertEquals(first.size(),1);
+
     assertTrue(first.includes("H"));
     // head point to the first node in the linked list
     assertEquals("{ H } -> Null" , first.toString());
@@ -35,7 +37,60 @@ class LibraryTest {
     //return a collection of all the values that exist in the linked list
     assertEquals("{ O } -> { L } -> { L } -> { E } -> { H } -> Null" , first.toString());
 
-  }}
+  }
+  @Test void appendTest (){
+    LinkedList ll = new LinkedList();
+    //Add a node to the end of the linked list
+    assertEquals(0,ll.size());
+    ll.append("Sleepy!");
+    assertEquals(1,ll.size());
+    System.out.println(ll);
+  }
+
+  @Test void multiAppendTest (){
+    LinkedList ll = new LinkedList();
+    //add multiple nodes to the end of a linked list
+    assertEquals(0,ll.size());
+    ll.append("A");
+    ll.append("B");
+    ll.append("C");
+    assertEquals(3,ll.size());
+    System.out.println(ll);
+  }
+  @Test void beforeInsertTest (){
+    LinkedList ll = new LinkedList();
+    assertEquals(0,ll.size());
+    ll.append("AA");
+    ll.append("BB");
+    ll.append("DD");
+    System.out.println(ll);
+    //insert a node before a node located i the middle of a linked list
+//    ll.insertBefore("BB","CC");
+//    System.out.println(ll);
+
+    // insert a node before the first node of a linked list
+//    ll.insertBefore("AA","00");
+    System.out.println(ll);
+  }
+
+//  @Test void afterInsertTest (){
+//    LinkedList ll = new LinkedList();
+//    //insert a node before a node located i the middle of a linked list
+//    assertEquals(0,ll.size());
+//    ll.append("WW");
+//    ll.append("XX");
+//    ll.append("YY");
+//    ll.append("ZZ");
+//    //Insert after a node in the middle of the linked list
+//    ll.insertAfter("YY","55");
+//    assertEquals(5,ll.size());
+//    System.out.println(ll);
+//    //insert a node after the last node of the linked list
+//    ll.insertAfter("ZZ","00000");
+//    assertEquals(6,ll.size());
+//    System.out.println(ll);
+//  }
+}
 
 
 
