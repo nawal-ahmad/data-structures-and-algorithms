@@ -6,7 +6,7 @@ package linked.list;
 import linked.list.structure.SinglyLinkedList;
 
 public class Main {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
     System.out.println("Hello World");
 
     System.out.println("\n======================================================");
@@ -26,6 +26,7 @@ public class Main {
     System.out.println(linkedList.includes("J"));
     System.out.println(linkedList.includes("L"));
     System.out.println(linkedList.includes("M"));
+    System.out.println(linkedList.kthFromEnd(2));
 
     System.out.println("\n======================================================");
 

@@ -2,6 +2,7 @@ package linked.list.structure;
 
 import linked.list.data.Node;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class SinglyLinkedList {
@@ -75,6 +76,7 @@ public class SinglyLinkedList {
           newNode.setNext(current.getNext());
           current.setNext(newNode);
       }
+      size++;
   }
 
   public void insertAfter(String value, String newValue) {
@@ -88,7 +90,26 @@ public class SinglyLinkedList {
       newNode.setNext(current.getNext());
       current.setNext(newNode);
     }
+    size++;
   }
+
+  public String kthFromEnd(int k) throws Exception {
+    int size = size();
+    if (k < 0 || k >= size) {
+      throw new Exception("number out of the range");
+    }
+    int nodeIndex = size-1-k;
+    Node current = null;
+    if (nodeIndex > 0) {
+      current = head;
+      for (int i = 1; i < nodeIndex; i++) {
+        current = current.getNext();
+      }
+    }
+
+    return current.getValue();
+  }
+
 }
 
 //  public void printList() {
