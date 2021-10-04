@@ -3,12 +3,12 @@
  */
 package linked.list;
 
-import linked.list.structure.LinkedList;
+import linked.list.structure.SinglyLinkedList;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 class LibraryTest {
   @Test void linkedListTest (){
-    LinkedList first = new LinkedList();
+    SinglyLinkedList first = new SinglyLinkedList();
     // empty linked list
     assertEquals(first.size(),0);
     assertEquals("Null" , first.toString());
@@ -39,7 +39,7 @@ class LibraryTest {
 
   }
   @Test void appendTest (){
-    LinkedList ll = new LinkedList();
+    SinglyLinkedList ll = new SinglyLinkedList();
     //Add a node to the end of the linked list
     assertEquals(0,ll.size());
     ll.append("Sleepy!");
@@ -48,7 +48,7 @@ class LibraryTest {
   }
 
   @Test void multiAppendTest (){
-    LinkedList ll = new LinkedList();
+    SinglyLinkedList ll = new SinglyLinkedList();
     //add multiple nodes to the end of a linked list
     assertEquals(0,ll.size());
     ll.append("A");
@@ -58,38 +58,39 @@ class LibraryTest {
     System.out.println(ll);
   }
   @Test void beforeInsertTest (){
-    LinkedList ll = new LinkedList();
+    SinglyLinkedList ll = new SinglyLinkedList();
+    // empty linked list
     assertEquals(0,ll.size());
-    ll.append("AA");
-    ll.append("BB");
-    ll.append("DD");
+    ll.append("10");
+    ll.append("20");
+    ll.append("40");
     System.out.println(ll);
     //insert a node before a node located i the middle of a linked list
-//    ll.insertBefore("BB","CC");
-//    System.out.println(ll);
+    ll.insertBefore("40","5555");
+    System.out.println(ll);
 
     // insert a node before the first node of a linked list
-//    ll.insertBefore("AA","00");
+    ll.insertBefore("AA","00");
     System.out.println(ll);
   }
 
-//  @Test void afterInsertTest (){
-//    LinkedList ll = new LinkedList();
-//    //insert a node before a node located i the middle of a linked list
-//    assertEquals(0,ll.size());
-//    ll.append("WW");
-//    ll.append("XX");
-//    ll.append("YY");
-//    ll.append("ZZ");
-//    //Insert after a node in the middle of the linked list
-//    ll.insertAfter("YY","55");
-//    assertEquals(5,ll.size());
-//    System.out.println(ll);
-//    //insert a node after the last node of the linked list
-//    ll.insertAfter("ZZ","00000");
-//    assertEquals(6,ll.size());
-//    System.out.println(ll);
-//  }
+  @Test void afterInsertTest (){
+    SinglyLinkedList ll = new SinglyLinkedList();
+    //insert a node before a node located i the middle of a linked list
+    assertEquals(0,ll.size());
+    ll.append("WW");
+    ll.append("XX");
+    ll.append("YY");
+    ll.append("ZZ");
+    //Insert after a node in the middle of the linked list
+    ll.insertAfter("YY","55");
+    assertEquals(4,ll.size());
+    System.out.println(ll);
+    //insert a node after the last node of the linked list
+    ll.insertAfter("ZZ","00000");
+    assertEquals(4,ll.size());
+    System.out.println(ll);
+  }
 }
 
 

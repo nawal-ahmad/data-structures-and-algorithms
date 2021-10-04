@@ -4,7 +4,7 @@ import linked.list.data.Node;
 
 import java.util.Objects;
 
-public class LinkedList {
+public class SinglyLinkedList {
   private Node head;
   private int size = 0;
 
@@ -12,7 +12,7 @@ public class LinkedList {
     return size;
   }
 
-  public LinkedList() {
+  public SinglyLinkedList() {
 
   }
   public void insert(String value) {
@@ -64,33 +64,29 @@ public class LinkedList {
   }
 
   public void insertBefore(String value, String newValue) {
-    if (includes(value)) {
-      Node newNode = new Node(newValue);
       Node current = head;
-      Node previous = head;
-
-      while (Objects.equals(previous.getNext().getValue(), value)) {
-        previous = previous.getNext();
+      Node newNode = new Node(newValue);
+      while(current.getNext() != null && current.getValue()!=value && current.getValue()!=value){
+        current = current.getNext();
       }
-      current = previous.getNext();
-      previous.setNext(newNode);
-      newNode.setNext(current);
-      size++;
-    }
+      if (current == head){
+        insert(newValue);
+      }else if (current.getNext() !=null){
+          newNode.setNext(current.getNext());
+          current.setNext(newNode);
+      }
   }
 
   public void insertAfter(String value, String newValue) {
-    if (includes(value)) {
-      Node newNode = new Node(newValue);
-      Node current = head;
-      Node previous = head;
-      while (!Objects.equals(previous.getValue(), value)) {
-        previous = previous.getNext();
-      }
-      current = previous.getNext();
-      previous.setNext(newNode);
-      newNode.setNext(current);
-      size++;
+    Node newNode = new Node(newValue);
+    Node current = head;
+
+    while(current.getNext() != null && current.getValue()!=value){
+      current = current.getNext();
+    }
+    if (current.getValue() == value){
+      newNode.setNext(current.getNext());
+      current.setNext(newNode);
     }
   }
 }
