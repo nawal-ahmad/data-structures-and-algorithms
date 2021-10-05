@@ -19,7 +19,7 @@ public class Main {
     linkedList.insert("A");
     linkedList.insert("N");
     linkedList.insertBefore("N","00");
-    linkedList.insertAfter("L", "55");
+
     System.out.println(linkedList.toString());
 
     System.out.println("\n======================================================");

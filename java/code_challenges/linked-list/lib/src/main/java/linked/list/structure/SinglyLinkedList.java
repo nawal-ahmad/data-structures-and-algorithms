@@ -2,9 +2,6 @@ package linked.list.structure;
 
 import linked.list.data.Node;
 
-import java.util.ArrayList;
-import java.util.Objects;
-
 public class SinglyLinkedList {
   private Node head;
   private int size = 0;
@@ -16,6 +13,7 @@ public class SinglyLinkedList {
   public SinglyLinkedList() {
 
   }
+
   public void insert(String value) {
     Node newNode = new Node(value);
     if (head != null) {
@@ -64,20 +62,41 @@ public class SinglyLinkedList {
     size++;
   }
 
-  public void insertBefore(String value, String newValue) {
-      Node current = head;
-      Node newNode = new Node(newValue);
-      while(current.getNext() != null && current.getValue()!=value && current.getValue()!=value){
+  public void insertBefore(String val, String newVal) {
+    if (head == null) {
+      System.out.println("List is Empty");
+    } else if(head.getValue()==val){
+      Node node=new Node(newVal);
+      node.setNext(head);
+      head=node;
+    }else {
+    Node prev = null;
+    Node current = head;
+    while (current.getValue() != val) {
+        prev = current;
         current = current.getNext();
       }
-      if (current == head){
-        insert(newValue);
-      }else if (current.getNext() !=null){
-          newNode.setNext(current.getNext());
-          current.setNext(newNode);
-      }
-      size++;
-  }
+      Node node = new Node(newVal);
+      prev.setNext(node);
+      node.setNext(current);
+      current = node;
+  }}
+
+
+//  public void insertBefore(String value, String newValue) {
+//      Node current = head;
+//      Node newNode = new Node(newValue);
+//      while(current.getNext() != null && current.getValue()!=value && current.getValue()!=value){
+//        current = current.getNext();
+//      }
+//      if (current == head){
+//        insert(newValue);
+//      }else if (current.getNext() !=null){
+//          newNode.setNext(current.getNext());
+//          current.setNext(newNode);
+//      }
+//      size++;
+//  }
 
   public void insertAfter(String value, String newValue) {
     Node newNode = new Node(newValue);
@@ -108,6 +127,24 @@ public class SinglyLinkedList {
     }
 
     return current.getValue();
+  }
+
+  public static SinglyLinkedList zipLists(SinglyLinkedList list1, SinglyLinkedList list2){
+    Node current1 = list1.head;
+    Node current2 = list2.head;
+    while(true){
+      if(current1 != null && current2 != null) {
+        list1.insertAfter(current1.getValue(), current2.getValue());
+        current1 = current1.getNext();
+        current2 = current2.getNext();
+      }else if(current1 == null && current2 != null){
+        list1.append((current2.getValue()));
+        current2 = current2.getNext();
+      }else {
+        break;
+      }
+    }
+    return list1;
   }
 
 }
