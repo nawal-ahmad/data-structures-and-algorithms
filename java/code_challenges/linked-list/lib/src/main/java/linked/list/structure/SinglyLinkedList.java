@@ -65,14 +65,15 @@ public class SinglyLinkedList {
   public void insertBefore(String val, String newVal) {
     if (head == null) {
       System.out.println("List is Empty");
-    } else if(head.getValue()==val){
-      Node node=new Node(newVal);
+    } else if (head.getValue() == val) {
+      Node node = new Node(newVal);
       node.setNext(head);
-      head=node;
-    }else {
-    Node prev = null;
-    Node current = head;
-    while (current.getValue() != val) {
+      head = node;
+      size++;
+    } else {
+      Node prev = null;
+      Node current = head;
+      while (current.getValue() != val) {
         prev = current;
         current = current.getNext();
       }
@@ -80,92 +81,63 @@ public class SinglyLinkedList {
       prev.setNext(node);
       node.setNext(current);
       current = node;
-  }}
+      size++;
+    }
+  }
 
-
-//  public void insertBefore(String value, String newValue) {
-//      Node current = head;
-//      Node newNode = new Node(newValue);
-//      while(current.getNext() != null && current.getValue()!=value && current.getValue()!=value){
-//        current = current.getNext();
-//      }
-//      if (current == head){
-//        insert(newValue);
-//      }else if (current.getNext() !=null){
-//          newNode.setNext(current.getNext());
-//          current.setNext(newNode);
-//      }
-//      size++;
-//  }
-
-  public void insertAfter(String value, String newValue) {
-    Node newNode = new Node(newValue);
+  public void insertAfter(String val, String newVal) {
+    if (head == null) {
+      System.out.println("List is empty");
+    }
     Node current = head;
-
-    while(current.getNext() != null && current.getValue()!=value){
+    while (current.getValue() != val) {
       current = current.getNext();
     }
-    if (current.getValue() == value){
-      newNode.setNext(current.getNext());
-      current.setNext(newNode);
-    }
+    Node node = new Node(newVal);
+    node.setNext(current.getNext());
+    current.setNext(node);
     size++;
   }
 
   public String kthFromEnd(int k) throws Exception {
     int size = size();
+    if (head == null) {
+      System.out.println("List is empty");
+    }
     if (k < 0 || k >= size) {
       throw new Exception("number out of the range");
-    }
-    int nodeIndex = size-1-k;
-    Node current = null;
-    if (nodeIndex > 0) {
-      current = head;
-      for (int i = 1; i < nodeIndex; i++) {
+    } else {
+      int nodeIndex = size - k - 1;
+      Node current = head;
+      int counter = 0;
+      while (counter != nodeIndex) {
         current = current.getNext();
+        counter++;
       }
+      return current.getValue();
     }
-
-    return current.getValue();
   }
 
-  public static SinglyLinkedList zipLists(SinglyLinkedList list1, SinglyLinkedList list2){
-    Node current1 = list1.head;
-    Node current2 = list2.head;
-    while(true){
-      if(current1 != null && current2 != null) {
-        list1.insertAfter(current1.getValue(), current2.getValue());
+  public static SinglyLinkedList zipLists(SinglyLinkedList ll1, SinglyLinkedList ll2) {
+    SinglyLinkedList out = new SinglyLinkedList();
+    Node current1 = ll1.head;
+    Node current2 = ll2.head;
+    while (current1 != null || current2 != null) {
+      if (current1 == null) {
+        out.append(current2.getValue());
+        current2 = current2.getNext();
+      } else if (current2 == null) {
+        out.append(current1.getValue());
+        current1 = current1.getNext();
+      } else {
+        out.append(current1.getValue());
+        out.append(current2.getValue());
+
         current1 = current1.getNext();
         current2 = current2.getNext();
-      }else if(current1 == null && current2 != null){
-        list1.append((current2.getValue()));
-        current2 = current2.getNext();
-      }else {
-        break;
       }
     }
-    return list1;
+    return out;
   }
-
 }
-
-//  public void printList() {
-//    if (head == null) {
-//      System.out.println("List is empty");
-//    } else {
-//      Node current;
-//      current = head;
-//
-//      System.out.print("HEAD -> ");
-//
-//      while (current != null) {
-//        // moves the current reference along the list
-//        System.out.print(current + " -> ");
-//        current = current.getNext();
-//      }
-//
-//      System.out.println("NULL");
-//    }
-//  }
-
 
