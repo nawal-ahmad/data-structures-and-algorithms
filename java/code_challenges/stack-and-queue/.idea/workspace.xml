@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2fdbe35-42e1-4dde-8b02-25c7e4770434" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/data/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/structure/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/structure/Stack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
-    </list>
+    <list default="true" id="c2fdbe35-42e1-4dde-8b02-25c7e4770434" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,5 +99,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

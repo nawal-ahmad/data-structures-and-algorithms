@@ -46,5 +46,17 @@ public class Main {
 
     System.out.println("\n======================================================");
 
+    SinglyLinkedList ll1= new SinglyLinkedList();
+    SinglyLinkedList ll2= new SinglyLinkedList();
+
+    ll1.append("11");
+    ll1.append("33");
+    ll1.append("55");
+    ll2.append("22");
+    ll2.append("44");
+    ll2.append("66");
+    System.out.println("ll1 is " +ll1);
+    System.out.println("ll2 is "+ ll2);
+    System.out.println(linkedList.zipLists(ll1,ll2));
   }
 }

@@ -99,13 +99,13 @@ public class SinglyLinkedList {
     size++;
   }
 
-  public String kthFromEnd(int k) throws Exception {
+  public String kthFromEnd(int k) throws IndexOutOfBoundsException {
     int size = size();
     if (head == null) {
       System.out.println("List is empty");
     }
     if (k < 0 || k >= size) {
-      throw new Exception("number out of the range");
+      throw new IndexOutOfBoundsException("number out of the range");
     } else {
       int nodeIndex = size - k - 1;
       Node current = head;
