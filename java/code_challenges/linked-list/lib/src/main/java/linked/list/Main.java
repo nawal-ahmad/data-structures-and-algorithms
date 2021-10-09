@@ -3,7 +3,7 @@
  */
 package linked.list;
 
-import linked.list.structure.LinkedList;
+import linked.list.structure.SinglyLinkedList;
 
 public class Main {
   public static void main(String[] args) {
@@ -12,12 +12,14 @@ public class Main {
     System.out.println("\n======================================================");
     System.out.println("\nLinked List Demo \n");
 
-    LinkedList linkedList = new LinkedList();
+    SinglyLinkedList linkedList = new SinglyLinkedList();
     linkedList.insert("L");
     linkedList.insert("A");
     linkedList.insert("W");
     linkedList.insert("A");
     linkedList.insert("N");
+    linkedList.insertBefore("N","00");
+    linkedList.insertAfter("L", "55");
     System.out.println(linkedList.toString());
 
     System.out.println("\n======================================================");
@@ -26,5 +28,6 @@ public class Main {
     System.out.println(linkedList.includes("M"));
 
     System.out.println("\n======================================================");
+
   }
 }
