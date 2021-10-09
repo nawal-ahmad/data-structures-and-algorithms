@@ -3,6 +3,7 @@
  */
 package linked.list;
 
+import linked.list.data.Node;
 import linked.list.structure.SinglyLinkedList;
 
 public class Main {
@@ -16,12 +17,27 @@ public class Main {
     linkedList.insert("L");
     linkedList.insert("A");
     linkedList.insert("W");
+    linkedList.insert("W");
     linkedList.insert("A");
-    linkedList.insert("N");
-    linkedList.insertBefore("N","00");
-    linkedList.insertAfter("L", "55");
+    linkedList.insert("L");
+    linkedList.append("ZZZZZZZZZZ");
+
+//    linkedList.insertAfter("N","00");
+//    linkedList.insertBefore("L", "55");
+    System.out.println(linkedList.kthFromEnd(3));
     System.out.println(linkedList.toString());
 
+    SinglyLinkedList ll = new SinglyLinkedList();
+    ll.insert("1");
+    ll.insert("2");
+    ll.insert("3");
+    ll.insert("3");
+    ll.insert("2");
+    ll.insert("1");
+
+    System.out.println(linkedList);
+//    System.out.println(linkedList.isPalindrome());
+//    System.out.println(ll.isPalindrome());
     System.out.println("\n======================================================");
     System.out.println(linkedList.includes("J"));
     System.out.println(linkedList.includes("L"));
@@ -30,5 +46,17 @@ public class Main {
 
     System.out.println("\n======================================================");
 
+    SinglyLinkedList ll1= new SinglyLinkedList();
+    SinglyLinkedList ll2= new SinglyLinkedList();
+
+    ll1.append("11");
+    ll1.append("33");
+    ll1.append("55");
+    ll2.append("22");
+    ll2.append("44");
+    ll2.append("66");
+    System.out.println("ll1 is " +ll1);
+    System.out.println("ll2 is "+ ll2);
+    System.out.println(linkedList.zipLists(ll1,ll2));
   }
 }

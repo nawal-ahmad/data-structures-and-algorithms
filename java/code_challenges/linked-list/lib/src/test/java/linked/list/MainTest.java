@@ -4,7 +4,11 @@
 package linked.list;
 
 import linked.list.structure.SinglyLinkedList;
+import org.checkerframework.common.value.qual.StringVal;
 import org.junit.jupiter.api.Test;
+
+import java.util.LinkedList;
+
 import static org.junit.jupiter.api.Assertions.*;
 class LibraryTest {
   @Test void linkedListTest (){
@@ -67,10 +71,11 @@ class LibraryTest {
     System.out.println(ll);
     //insert a node before a node located i the middle of a linked list
     ll.insertBefore("40","5555");
+    assertEquals(ll.size(),4);
     System.out.println(ll);
 
     // insert a node before the first node of a linked list
-    ll.insertBefore("AA","00");
+    ll.insertBefore("10","00");
     System.out.println(ll);
   }
 
@@ -84,13 +89,54 @@ class LibraryTest {
     ll.append("ZZ");
     //Insert after a node in the middle of the linked list
     ll.insertAfter("YY","55");
-    assertEquals(4,ll.size());
+    assertEquals(5,ll.size());
     System.out.println(ll);
     //insert a node after the last node of the linked list
     ll.insertAfter("ZZ","00000");
-    assertEquals(4,ll.size());
+    assertEquals(6,ll.size());
     System.out.println(ll);
   }
+  @Test void kthFromEndTest() throws Exception {
+    SinglyLinkedList ll = new SinglyLinkedList();
+    ll.append("55");
+    // Where the linked list is of a size 1
+    assertEquals(ll.kthFromEnd(0), "55");
+    ll.append("66");
+    ll.append("77");
+    //  Where k is greater than the length of the linked list
+    assertThrows(IndexOutOfBoundsException.class,() -> ll.kthFromEnd(6));
+
+    // Where k and the length of the list are the same
+    assertEquals(ll.kthFromEnd(2),"55");
+
+    // Where k is not a positive integer
+    assertThrows(IndexOutOfBoundsException.class,() -> ll.kthFromEnd(-3));
+
+    // “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+    assertEquals(ll.kthFromEnd(1),"66");
+  }
+
+  @Test void zipListsTest(){
+    SinglyLinkedList ll1= new SinglyLinkedList();
+    SinglyLinkedList ll2= new SinglyLinkedList();
+    SinglyLinkedList ll3= new SinglyLinkedList();
+    SinglyLinkedList ll4 = new SinglyLinkedList();
+
+
+    ll1.append("11");
+    ll1.append("33");
+    ll1.append("55");
+    ll2.append("22");
+    ll2.append("44");
+    ll2.append("66");
+    ll3 = SinglyLinkedList.zipLists(ll1,ll2);
+    assertEquals(ll3.size(),6);
+  }
+
+
+  /*
+
+  * */
 }
 
 
