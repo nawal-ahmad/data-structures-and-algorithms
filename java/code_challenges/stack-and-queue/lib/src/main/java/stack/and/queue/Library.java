@@ -3,8 +3,11 @@
  */
 package stack.and.queue;
 
+import stack.and.queue.structure.PseudoQueue;
 import stack.and.queue.structure.Queue;
 import stack.and.queue.structure.Stack;
+
+import java.sql.PseudoColumnUsage;
 
 public class Library {
   public static void main(String[] args) throws Exception {
@@ -30,5 +33,17 @@ public class Library {
     System.out.println(queue.peek());
     queue.dequeue();
     System.out.println(queue.peek());
-  }
+
+
+    System.out.println("===========================================================Pseudo Queue test===========================================================");
+    PseudoQueue first= new PseudoQueue();
+    System.out.println(first.dequeue());
+    first.enqueue("Hey");
+    first.enqueue("From");
+    first.enqueue("Queue");
+    System.out.println(first.getSize());
+    first.dequeue();
+    System.out.println(first.getSize());
+}
+
 }

@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2fdbe35-42e1-4dde-8b02-25c7e4770434" name="Changes" comment="" />
+    <list default="true" id="c2fdbe35-42e1-4dde-8b02-25c7e4770434" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../.idea/data-structures-and-algorithms.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/stack-and-queue.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/data/GenericNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/structure/PseudoQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/structure/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/structure/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/test/java/stack/and/queue/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/stack/and/queue/LibraryTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +45,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -47,7 +59,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LibraryTest" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -72,11 +84,6 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.LibraryTest" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.LibraryTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
