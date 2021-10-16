@@ -37,12 +37,23 @@ public class Stack {
     }
   }
 
+  public Node getTop() {
+    return top;
+  }
+
   public boolean isEmpty() {
     return top == null;
   }
 
   public int getSize() {
     return size;
+  }
+
+  @Override
+  public String toString() {
+    return "Stack{" +
+      "top=" + top +
+      '}';
   }
 }
 

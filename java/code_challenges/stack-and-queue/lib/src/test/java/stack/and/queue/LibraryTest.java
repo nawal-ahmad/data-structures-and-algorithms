@@ -4,6 +4,7 @@
 package stack.and.queue;
 
 import org.junit.jupiter.api.Test;
+import stack.and.queue.structure.PseudoQueue;
 import stack.and.queue.structure.Queue;
 import stack.and.queue.structure.Stack;
 
@@ -15,7 +16,7 @@ class LibraryTest {
     }
     @Test void stackTest() throws Exception {
       // Can successfully instantiate an empty stack
-      Stack stack= new Stack();
+      Stack stack = new Stack();
       assertTrue(stack.isEmpty());
 
       stack.push("800");
@@ -25,7 +26,7 @@ class LibraryTest {
       stack.push("700");
       stack.push("600");
       //Can successfully push multiple values onto a stack
-      assertEquals(stack.getSize(),3);
+      assertEquals(stack.getSize(), 3);
 
       // Can successfully pop off the stack
       stack.pop();
@@ -38,11 +39,11 @@ class LibraryTest {
 
       // Can successfully peek the next item on the stack
       stack.push("500");
-      assertEquals(stack.peek(),"500");
+      assertEquals(stack.peek(), "500");
       stack.pop();
-
-
-      // Can successfully instantiate an empty queue
+    }
+  @Test void queueTest() throws Exception {
+    // Can successfully instantiate an empty queue
       Queue queue = new Queue();
       assertTrue(queue.isEmpty());
 
@@ -67,4 +68,16 @@ class LibraryTest {
       queue.dequeue();
       assertTrue(queue.isEmpty());
     }
+    @Test
+    void pseudoQueueTesting() throws Exception {
+    PseudoQueue first = new PseudoQueue();
+    assertEquals(first.dequeue(),null);
+    assertEquals(first.getSize(), 0);
+    // testing the enQueue Method
+    first.enqueue("Hello");
+    first.enqueue("World");
+    assertEquals(first.getSize(),2);
+    // testing the enQueue Method
+    assertEquals(first.dequeue(), "Hello");
+  }
 }
