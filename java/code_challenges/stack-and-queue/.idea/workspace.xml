@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2fdbe35-42e1-4dde-8b02-25c7e4770434" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../.idea/data-structures-and-algorithms.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/stack-and-queue.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/data/GenericNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/structure/PseudoQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/structure/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/stack/and/queue/structure/Stack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/test/java/stack/and/queue/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/stack/and/queue/LibraryTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="c2fdbe35-42e1-4dde-8b02-25c7e4770434" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
