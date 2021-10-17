@@ -1,87 +1,58 @@
-package trees.chaleenges.base;
+package trees.structure;
 
-import trees.chaleenges.data.Node;
+import trees.data.Node;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public abstract class BinaryTree<T> {
+public class BinaryTree <T>{
+  Node<T> root;
+  ArrayList<T> preOrderList = new ArrayList<>();
+  ArrayList<T> inOrderList = new ArrayList<>();
+  ArrayList<T> postOrderList = new ArrayList<>();
 
-  protected Node<T> root;
+  public BinaryTree() {
 
-
-  public List<T> preOrder() {
-    if (isEmpty()) {
-      return null;
-    }
-    List<T> list = new ArrayList<>();
-    preOrderHelper(root, list);
-    return list;
+  }
+  public BinaryTree(T value) {
+    this.root = new Node<>(value);
   }
 
-  public List<T> inOrder() {
-    if (isEmpty()) {
-      return null;
-    }
-    List<T> list = new ArrayList<>();
-    inOrderHelper(root, list);
-    return list;
+  public ArrayList<T> preOrder(Node<T> root){
+    if(root != null){
+      this.preOrderList.add(root.value);
+      if (root.left != null){
+        preOrder(root.left);
+      }
+      if (root.right != null) {
+        preOrder(root.right);
+      }}
+    return this.preOrderList;
   }
 
-  public List<T> postOrder() {
-    if (isEmpty()) {
-      return null;
+  public ArrayList<T> inOrder(Node<T> root){
+    if(root != null){
+      if (root.left != null){
+        inOrder(root.left);
+      }
+      this.inOrderList.add(root.value);
+      if (root.right != null) {
+        inOrder(root.right);
+      }
     }
-    List<T> list = new ArrayList<>();
-    postOrderHelper(root, list);
-    return list;
+    return this.inOrderList;
   }
 
-/////////////////////////////////////////////////////////////
-
-  private void preOrderHelper(Node<T> rootArg, List<T> list) {
-
-    list.add(rootArg.getData());
-
-    if (rootArg.getLeft() != null) {
-      preOrderHelper(rootArg.getLeft(), list);
+  public ArrayList<T> postOrder(Node<T> root){
+    if(root != null){
+      if (root.left != null){
+        postOrder(root.left);
+      }
+      if (root.right != null) {
+        postOrder(root.right);
+      }
+      this.postOrderList.add(root.value);
     }
-
-    if (rootArg.getRight() != null) {
-      preOrderHelper(rootArg.getRight(), list);
-    }
-  }
-
-  private void inOrderHelper(Node<T> rootArg, List<T> list) {
-
-    if (rootArg.getLeft() != null) {
-      inOrderHelper(rootArg.getLeft(), list);
-    }
-
-    list.add(rootArg.getData());
-
-    if (rootArg.getRight() != null) {
-      inOrderHelper(rootArg.getRight(), list);
-    }
-  }
-
-  private void postOrderHelper(Node<T> rootArg, List<T> list) {
-
-
-    if (rootArg.getLeft() != null) {
-      postOrderHelper(rootArg.getLeft(), list);
-    }
-
-    if (rootArg.getRight() != null) {
-      postOrderHelper(rootArg.getRight(), list);
-    }
-
-    list.add(rootArg.getData());
-  }
-
-
-  public boolean isEmpty() {
-    return root == null;
+    return this.postOrderList;
   }
 
 }
