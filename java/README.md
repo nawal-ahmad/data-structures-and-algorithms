@@ -11,4 +11,4 @@
 | stack and queue challenges | [stack and queue](code_challenges/stack-and-queue/README.md), [code](code_challenges/stack-and-queue) |
 | stack queue pseudo | [stack queue pseudo](code_challenges/stack-queue-pseudo/README.md), [code](code_challenges/stack-and-queue/lib/src/main/java/stack/and/queue/structure/PseudoQueue.java) |
 | stack queue animal shelter | [stack queue animal shelter](code_challenges/stack-queue-animal-shelter/assets/README.md)|
-
+| stack queue brackets | [stack queue brackets](code_challenges/stack-queue-brackets/README.md)|
