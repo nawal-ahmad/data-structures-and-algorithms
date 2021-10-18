@@ -54,5 +54,16 @@ public class BinaryTree <T>{
     }
     return this.postOrderList;
   }
+  public Integer maximum(){
+    Integer max = 0;
+    ArrayList<T> list = preOrder(this.root);
+    for (T t : list) {
+      if (max < (Integer) t) {
+        max = (Integer) t;
+      }
+    }
+    return max;
+  }
+
 
 }
