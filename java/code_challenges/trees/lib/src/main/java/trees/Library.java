@@ -8,9 +8,9 @@ import trees.structure.BinarySearchTree;
 import trees.structure.BinaryTree;
 
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
-    }
+  public boolean someLibraryMethod() {
+    return true;
+  }
 
   public static void main(String[] args) {
     BinarySearchTree bt = new BinarySearchTree();
@@ -22,21 +22,41 @@ public class Library {
     bt.add(8);
     System.out.println(bt.maximum());
     System.out.println("==================================");
-    System.out.println("Summation :"+ bt.summation());
-    BinaryTree binaryTree=new BinaryTree();
+    System.out.println("Summation :" + bt.summation());
+    BinaryTree binaryTree = new BinaryTree();
     binaryTreeSimulator();
+    System.out.println("===============================================");
 
+    KaryTree Tree = new KaryTree(4);
+    KNode root = new KNode("10");
+
+    KNode node1 = new KNode("7");
+    KNode node2 = new KNode("88");
+    KNode node3 = new KNode("45");
+    KNode node4 = new KNode("8");
+    KNode node5 = new KNode("13");
+    KNode node6 = new KNode("20");
+
+    Tree.root = root;
+
+    root.children.add(node1);
+    root.children.add(node2);
+    node1.children.add(node3);
+    node2.children.add(node4);
+    node2.children.add(node5);
+    node2.children.add(node6);
+    System.out.println(Tree.fizzBuzz(Tree));
   }
+
   private static void binaryTreeSimulator() {
-    BinaryTree binaryTree=new BinaryTree();
+    BinaryTree binaryTree = new BinaryTree();
     binaryTree.setRoot(new BTNode("N"));
     binaryTree.getRoot().setLeft(new BTNode("A"));
     binaryTree.getRoot().setRight(new BTNode("W"));
     binaryTree.getRoot().getLeft().setLeft(new BTNode("A"));
     binaryTree.getRoot().getLeft().setRight(new BTNode("L"));
 
-    System.out.println("\n+'========================================================'");
+    System.out.println("========================================================'");
     binaryTree.BreadthFirst();
   }
-
 }

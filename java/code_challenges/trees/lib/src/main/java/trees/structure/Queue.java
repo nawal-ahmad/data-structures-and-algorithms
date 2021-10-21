@@ -2,6 +2,8 @@ package trees.structure;
 
 import trees.data.QNode;
 
+import java.util.List;
+
 public class Queue<T> {
 
   private QNode<T> front;
@@ -52,4 +54,6 @@ public class Queue<T> {
   public void setBack(QNode<T> back) {
     this.back = back;
   }
+
+
 }
