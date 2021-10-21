@@ -9,14 +9,14 @@ public class Queue {
 
   public void enqueue(String data) {
     if (isEmpty()) {
-      Node node = new Node(data);
-      front = node;
-      back = node;
+      Node Node = new Node(data);
+      front = Node;
+      back = Node;
       size++;
     } else {
-      Node node = new Node(data);
-      back.setNext(node);
-      back = node;
+      Node Node = new Node(data);
+      back.setNext(Node);
+      back = Node;
       size++;
     }
   }

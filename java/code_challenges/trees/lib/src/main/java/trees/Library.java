@@ -3,6 +3,7 @@
  */
 package trees;
 
+import trees.data.BTNode;
 import trees.structure.BinarySearchTree;
 import trees.structure.BinaryTree;
 
@@ -12,12 +13,30 @@ public class Library {
     }
 
   public static void main(String[] args) {
-    BinarySearchTree<Integer> bt = new BinarySearchTree<>();
+    BinarySearchTree bt = new BinarySearchTree();
     bt.add(5);
     bt.add(9);
     bt.add(15);
     bt.add(88);
     bt.add(45);
+    bt.add(8);
     System.out.println(bt.maximum());
+    System.out.println("==================================");
+    System.out.println("Summation :"+ bt.summation());
+    BinaryTree binaryTree=new BinaryTree();
+    binaryTreeSimulator();
+
   }
+  private static void binaryTreeSimulator() {
+    BinaryTree binaryTree=new BinaryTree();
+    binaryTree.setRoot(new BTNode("N"));
+    binaryTree.getRoot().setLeft(new BTNode("A"));
+    binaryTree.getRoot().setRight(new BTNode("W"));
+    binaryTree.getRoot().getLeft().setLeft(new BTNode("A"));
+    binaryTree.getRoot().getLeft().setRight(new BTNode("L"));
+
+    System.out.println("\n+'========================================================'");
+    binaryTree.BreadthFirst();
+  }
+
 }
