@@ -1,6 +1,6 @@
 package trees.structure;
 
-import trees.data.Node;
+import trees.data.BTNode;
 
 public class BinarySearchTree<T> extends BinaryTree<T>{
   public BinarySearchTree() {
@@ -11,8 +11,8 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
   }
 
   public void add(T value){
-    Node<T> newNode = new Node<>(value);
-    Node<T> temp = root;
+    BTNode<T> newNode = new BTNode<>(value);
+    BTNode<T> temp = root;
     if (root == null){
       root = newNode;
     }else {
@@ -35,8 +35,8 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
     }
   }
 
-  public boolean contains(T value, Node<T> rootNode){
-    Node<T> current = rootNode;
+  public boolean contains(T value, BTNode<T> rootNode){
+    BTNode<T> current = rootNode;
     if (rootNode != null){
       if ((int)value == (int)current.value){
         return true;

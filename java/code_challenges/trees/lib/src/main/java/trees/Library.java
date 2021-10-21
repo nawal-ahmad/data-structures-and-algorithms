@@ -12,12 +12,17 @@ public class Library {
     }
 
   public static void main(String[] args) {
-    BinarySearchTree<Integer> bt = new BinarySearchTree<>();
+    BinarySearchTree bt = new BinarySearchTree();
     bt.add(5);
     bt.add(9);
     bt.add(15);
     bt.add(88);
     bt.add(45);
+    bt.add(8);
     System.out.println(bt.maximum());
+    System.out.println("==================================");
+    System.out.println("Summation :"+ bt.summation());
   }
+
+
 }

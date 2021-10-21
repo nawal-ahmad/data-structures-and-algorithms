@@ -1,11 +1,13 @@
 package trees.structure;
 
-import trees.data.Node;
+
+import trees.data.BTNode;
 
 import java.util.ArrayList;
 
+
 public class BinaryTree <T>{
-  Node<T> root;
+  BTNode<T> root;
   ArrayList<T> preOrderList = new ArrayList<>();
   ArrayList<T> inOrderList = new ArrayList<>();
   ArrayList<T> postOrderList = new ArrayList<>();
@@ -14,10 +16,10 @@ public class BinaryTree <T>{
 
   }
   public BinaryTree(T value) {
-    this.root = new Node<>(value);
+    this.root = new BTNode<>(value);
   }
 
-  public ArrayList<T> preOrder(Node<T> root){
+  public ArrayList<T> preOrder(BTNode<T> root){
     if(root != null){
       this.preOrderList.add(root.value);
       if (root.left != null){
@@ -29,7 +31,7 @@ public class BinaryTree <T>{
     return this.preOrderList;
   }
 
-  public ArrayList<T> inOrder(Node<T> root){
+  public ArrayList<T> inOrder(BTNode<T> root){
     if(root != null){
       if (root.left != null){
         inOrder(root.left);
@@ -42,7 +44,7 @@ public class BinaryTree <T>{
     return this.inOrderList;
   }
 
-  public ArrayList<T> postOrder(Node<T> root){
+  public ArrayList<T> postOrder(BTNode<T> root){
     if(root != null){
       if (root.left != null){
         postOrder(root.left);
@@ -64,6 +66,19 @@ public class BinaryTree <T>{
     }
     return max;
   }
-
+  public Integer summation(){
+    BTNode node= root;
+    int sum=0;
+    ArrayList<Integer> list = (ArrayList<Integer>) postOrder((BTNode<T>) node);
+    if (node.value == null) {
+      return -1;
+    }
+    for (int i = 0; i < list.size(); i++) {
+      if (list.get(i) % 2 != 0) {
+        sum += list.get(i);
+      }
+    }
+    return sum;
+  }
 
 }

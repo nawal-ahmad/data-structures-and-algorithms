@@ -1,29 +1,37 @@
 package trees.structure;
-
-
-import trees.data.Node;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+import trees.data.QNode;
+import trees.data.BTNode;
 
 public class TreeBreadthFirst {
-  public static ArrayList<Integer> breadthFirst(BinaryTree<Integer> tree) {
-    ArrayList<Integer> values = new ArrayList<Integer>();
-    Queue<Node> test = new LinkedList<>();
-    if (tree.root != null) {
-      test.add(tree.root);
-      while (!test.isEmpty()) {
-        Node node = test.remove();
-        values.add((Integer) node.value);
+    private BTNode root;
+    public BTNode getRoot() {
+      return root;
+    }
+
+    public void setRoot(BTNode root) {
+      this.root = root;
+    }
+
+  public void BreadthFirst() {
+    if (root != null) {
+      Queue<BTNode> queue = new Queue<>();
+      queue.enqueue(root);
+
+      BTNode node;
+      while (!queue.isEmpty()) {
+        node = queue.dequeue();
+        System.out.print(node.left + " => ");
         if (node.left != null) {
-          test.add(node.left);
+          queue.enqueue(node.left);
         }
+
         if (node.right != null) {
-          test.add(node.right);
+          queue.enqueue(node.right);
         }
       }
+    } else {
+      System.out.println("Tree empty");
     }
-    return values;
   }
+
 }
