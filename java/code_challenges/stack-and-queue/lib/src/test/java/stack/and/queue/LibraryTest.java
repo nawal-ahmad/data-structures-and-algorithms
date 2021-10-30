@@ -4,6 +4,7 @@
 package stack.and.queue;
 
 import org.junit.jupiter.api.Test;
+import stack.and.queue.structure.BracketsStack;
 import stack.and.queue.structure.PseudoQueue;
 import stack.and.queue.structure.Queue;
 import stack.and.queue.structure.Stack;
@@ -79,5 +80,16 @@ class LibraryTest {
     assertEquals(first.getSize(),2);
     // testing the enQueue Method
     assertEquals(first.dequeue(), "Hello");
+  }
+
+  @Test
+  void  bracketsTest(){
+    BracketsStack bracketsStack = new BracketsStack();
+    String str1 = "{}JJJ()Ggg[fff]";
+    String str2 = "{()}JJJ()Ggg[fff]";
+    String str3 = "{(}JJJ()Ggg[fff]";
+    assertTrue(bracketsStack.bracket(str1));
+    assertTrue(bracketsStack.bracket(str2));
+    assertFalse(bracketsStack.bracket(str3));
   }
 }
