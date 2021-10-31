@@ -3,6 +3,7 @@
  */
 package stack.and.queue;
 
+import stack.and.queue.structure.BracketsStack;
 import stack.and.queue.structure.PseudoQueue;
 import stack.and.queue.structure.Queue;
 import stack.and.queue.structure.Stack;
@@ -44,6 +45,17 @@ public class Library {
     System.out.println(first.getSize());
     first.dequeue();
     System.out.println(first.getSize());
-}
+
+    System.out.println("===========================================================Brackets Stack===========================================================");
+    BracketsStack bracketsStack = new BracketsStack();
+    String str1 = "{}JJJ()Ggg[fff]";
+    String str2 = "{()}JJJ()Ggg[fff]";
+    String str3 = "{(}JJJ()Ggg[fff]";
+
+    System.out.println(bracketsStack.bracket(str1));
+    System.out.println(bracketsStack.bracket(str2));
+    System.out.println(bracketsStack.bracket(str3));
+
+  }
 
 }

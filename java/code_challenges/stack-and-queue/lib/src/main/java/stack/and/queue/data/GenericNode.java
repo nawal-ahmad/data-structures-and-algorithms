@@ -1,34 +1,26 @@
 package stack.and.queue.data;
 
 public class GenericNode<T> {
-  private GenericNode<T> next;
   private T data;
+  private GenericNode<T> next;
 
   public GenericNode(T data) {
-    this.data = data;
-  }
-
-  public GenericNode<T> getNext() {
-    return next;
-  }
-
-  public void setNext(GenericNode<T> next) {
-    this.next = next;
+      this.data = data;
   }
 
   public T getData() {
-    return data;
+      return data;
   }
 
   public void setData(T data) {
-    this.data = data;
+      this.data = data;
   }
 
-  @Override
-  public String toString() {
-    return "GenericNode{" +
-      "next=" + next +
-      ", data=" + data +
-      '}';
+  public GenericNode<T> getNext() {
+      return next;
+  }
+
+  public void setNext(GenericNode<T> next) {
+      this.next = next;
   }
 }
