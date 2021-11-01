@@ -16,3 +16,4 @@
 | tree-max| [tree-max](code_challenges/tree-max/README.md) [code](code_challenges/trees/lib/src/main/java/trees/structure/BinaryTree.java)|
 | tree-breadth-first| [tree-breadth-first](code_challenges/tree-max/README.md) [code](code_challenges/trees/lib/src/main/java/trees/structure/TreeBreadthFirst.java)|
 | tree-fizz-bizz| [tree-fizz-bizz](code_challenges/tree-fizz-buzz/readme.md) [code](code_challenges/trees/lib/src)|
+| insertion-sort| [insertion-sort](code_challenges/insertion-sort) 
