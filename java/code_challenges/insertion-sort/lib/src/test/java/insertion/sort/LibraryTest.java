@@ -13,8 +13,14 @@ class LibraryTest {
 
   @Test void insertionSort() {
 
-    int[]  regularArr = {8,4,23,42,16,15};
+    int[] regularArr = {8, 4, 23, 42, 16, 15};
     assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(Insertion.InsertionSort(regularArr)));
+  }
+
+  @Test void mergeSort(){
+    int[] regularArr = {8, 4, 23, 42, 16, 15};
+    assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(Insertion.mergeSort(regularArr)));
+
   }
 }
 
