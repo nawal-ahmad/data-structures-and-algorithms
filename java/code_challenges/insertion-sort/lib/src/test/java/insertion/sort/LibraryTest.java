@@ -20,7 +20,11 @@ class LibraryTest {
   @Test void mergeSort(){
     int[] regularArr = {8, 4, 23, 42, 16, 15};
     assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(Insertion.mergeSort(regularArr)));
+  }
 
+  @Test void quickSort(){
+    int[] regularArr = {8, 4, 23, 42, 16, 15};
+    assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(Insertion.quickSort(regularArr,0,5)));
   }
 }
 
