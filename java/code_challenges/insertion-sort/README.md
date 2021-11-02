@@ -33,3 +33,26 @@ Space: O(n log n)
 
 ## Code
 [code](/home/asac/401/data-structures-and-algorithms/java/code_challenges/insertion-sort/lib/src/main/java/insertion/sort/Insertion.java)
+
+
+
+# Challenge Summary:MergingQuick Sort Code Challenge 28
+write a function takes an array as an argument, and sort it in quick sort algorithm.
+
+
+
+## Whiteboard Process
+![Quick Sort](assets/quick.jpg)
+
+## Approach & Efficiency
+the big O notation:
+Time: O(n)
+Space: O(1)
+
+
+## Blog
+[blog](quickBLOG.md)
+
+## Code
+[code](/home/asac/401/data-structures-and-algorithms/java/code_challenges/insertion-sort/lib/src/main/java/insertion/sort/Insertion.java)
+
