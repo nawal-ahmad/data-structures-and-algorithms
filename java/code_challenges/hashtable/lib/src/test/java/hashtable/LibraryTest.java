@@ -7,6 +7,58 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-    }
+  HashTable<String, Integer> employeeSalary = new HashTable<>();
+
+  // Adding a key/value to your hashtable results in the value being in the data structure
+  @Test
+  public void addingTest(){
+    employeeSalary.add("Ahmad",1000);
+    assertEquals(employeeSalary.getSize(),1);
+  }
+
+  //Retrieving based on a key returns the value stored
+  @Test
+  public void getTest(){
+    employeeSalary.add("Ahmad",1000);
+    assertEquals(1000,employeeSalary.get("Ahmad"));
+  }
+
+  //Successfully returns null for a key that does not exist in the hashtable
+  @Test
+  public void testNull(){
+    employeeSalary.add("Ahmad",1000);
+    assertNull(employeeSalary.get("Ibrahim"));
+  }
+
+  //Successfully handle a collision within the hashtable
+  @Test
+  public void handleCollision(){
+    employeeSalary.add("Ahmad",1000);
+    employeeSalary.add("Ali",750);
+    employeeSalary.add("Heba",800);
+    employeeSalary.add("Sanaa",900);
+    assertEquals(4,employeeSalary.getSize());
+  }
+
+  // Successfully retrieve a value from a bucket within the hashtable that has a collision
+  @Test
+  public void retrieveFromCollision() {
+    employeeSalary.add("Ahmad", 1000);
+    employeeSalary.add("Ali", 750);
+    employeeSalary.add("Heba", 800);
+    employeeSalary.add("Sanaa", 900);
+    employeeSalary.add("Ahmad", 1000);
+    employeeSalary.add("Ali", 750);
+    employeeSalary.add("Heba", 800);
+    employeeSalary.add("Sanaa", 900);
+    assertEquals(900, employeeSalary.get("Sanaa"));
+  }
+
+  //Successfully hash a key to an in-range value
+  @Test
+  public void hashInRange(){
+//    employeeSalary.add("Ahmad", 1000);
+//    employeeSalary.add("Ali", 750);
+    assertEquals(employeeSalary.getBucketIndex("Ali"),8);
+  }
 }

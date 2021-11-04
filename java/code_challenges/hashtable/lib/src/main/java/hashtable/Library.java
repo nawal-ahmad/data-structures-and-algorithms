@@ -22,7 +22,8 @@ public class Library {
 
     System.out.println("The size is => " + employeeSalary.getSize());
     System.out.println(employeeSalary.isEmpty());
-//    System.out.println("Ali salary is => " + employeeSalary.get("Ali"));
-//    System.out.println(employeeSalary.contains("Nawal"));
+    System.out.println("Ali salary is => " + employeeSalary.get("Ali"));
+    System.out.println(employeeSalary.contains("Nawal"));
+    System.out.println(employeeSalary.contains("Mais"));
   }
 }

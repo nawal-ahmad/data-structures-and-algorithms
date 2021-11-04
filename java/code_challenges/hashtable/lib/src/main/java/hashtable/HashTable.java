@@ -3,14 +3,10 @@ package hashtable;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class HashTable <K, V> {
+public class HashTable<K, V> {
 
   private ArrayList<HashNode<K, V>> bucketArray;
-
-  // bucketArray size
   private int numBuckets;
-
-  // hash nodes number in bucketArray
   private int size;
 
   public HashTable() {
@@ -18,26 +14,19 @@ public class HashTable <K, V> {
     numBuckets = 10;
     size = 0;
 
-    // hash nodes number in bucketArray
     for (int index = 0; index < numBuckets; index++) {
       bucketArray.add(null);
     }
   }
 
-  //hash
-  private int hash(K key) {
+  private int hashCode(K key) {
     return Objects.hashCode(key);
   }
 
-  private int getBucketIndex(K key) {
-    int hashCode = hash(key);
-
-    // Index is with in the bounds of the bucket array
+  public int getBucketIndex(K key) {
+    int hashCode = hashCode(key);
     int index = hashCode % numBuckets;
-
-    // guarantee that hashCode has positive value
     index = index < 0 ? index * -1 : index;
-
     return index;
   }
 
@@ -49,60 +38,81 @@ public class HashTable <K, V> {
     return getSize() == 0;
   }
 
-
-  // Add
   public void add(K key, V value) {
-
-    // gets the head of a linked list for a given key
     int bucketIndex = getBucketIndex(key);
-    int hashCode = hash(key);
-    size++;
+    int hashCode = hashCode(key);
     HashNode<K, V> head = bucketArray.get(bucketIndex);
 
-    // check if key present
     while (head != null) {
       if (head.key.equals(key) && head.hashCode == hashCode) { // checks for duplicates
-        // if there is a duplicate just overwrite
         head.value = value;
         return;
       }
-
-      // adds to the chain of the linkedlist, by adding to the front
       head = head.next;
+    }
+    size++;
+    head = bucketArray.get(bucketIndex);
+    HashNode<K, V> newNode = new HashNode<>(key, value, hashCode);
+    newNode.next = head;
+    bucketArray.set(bucketIndex, newNode);
+
+    if ((1.0 * size) / numBuckets >= 0.7) {
+      ArrayList<HashNode<K, V>> temp = bucketArray;
+      bucketArray = new ArrayList<>();
+      numBuckets = 2 * numBuckets;
+      size = 0;
+
+      for (int index = 0; index < numBuckets; index++) {
+        bucketArray.add(null);
+      }
+
+      for (HashNode<K, V> headNode : temp) {
+        while (headNode != null) {
+          add(headNode.key, headNode.value);
+          headNode = headNode.next;
+        }
+      }
     }
   }
 
-  // get
+  public V remove(K key) {
+    int bucketIndex = getBucketIndex(key);
+    int hashCode = hashCode(key);
+    HashNode<K, V> head = bucketArray.get(bucketIndex);
+    HashNode<K, V> prev = null;
+    while (head != null) {
+      // If Key found
+      if (head.key.equals(key) && hashCode == head.hashCode)
+        break;
+      prev = head;
+      head = head.next;
+    }
+    if (head == null)
+      return null;
+    size--;
+    if (prev != null)
+      prev.next = head.next;
+    else
+      bucketArray.set(bucketIndex, head.next);
+    return head.value;
+  }
+
+
   public V get(K key) {
     int bucketIndex = getBucketIndex(key);
-    int hashCode = hash(key);
-
+    int hashCode = hashCode(key);
     HashNode<K, V> head = bucketArray.get(bucketIndex);
-
-    // search the linked list
     while (head != null) {
       if (head.key.equals(key) && head.hashCode == hashCode) {
         return head.value;
       }
-
       head = head.next;
     }
-    // key not found
     return null;
   }
 
-  //contains
-//  public boolean contains(K key){
-//
-//    int index = hash(key);
-//    if (bucketArray.get(index) != null){
-//      HashNode<K,V> current = bucketArray.get(index);
-//      while (current != null){
-//        if (current.key == key){
-//          return true;
-//        }else current= current.next;
-//      }
-//    }
-//    return false;
-//  }
+  public boolean contains(K key){
+    return get(key) != null;
+  }
 }
+
