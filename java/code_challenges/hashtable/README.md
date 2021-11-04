@@ -10,7 +10,11 @@ implement HashTable class with 4 methods (add , hash , contains , get).
 the big O notation for time and space is big O(n)
 
 ## API
+
 **hash()**: convert key to an integer index.
+
 **add()**: add a new key-value pair to the hash table.
+
 **get()**: get and return the value of the given key.
+
 **contains()**: check if the key exists in hash table and returns a boolean true or false.
