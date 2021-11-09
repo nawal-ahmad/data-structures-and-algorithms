@@ -12,3 +12,6 @@ create a method that accept a string of words to find the first repeated word(oc
 ## Approach & Efficiency
  - Time complexity:  O(n)
  - Space complexity: O(n)
+
+## Code
+[Hashmap Repeated code](lib/src/main/java/hashmap/repeated/word/RepeatedWord.java)

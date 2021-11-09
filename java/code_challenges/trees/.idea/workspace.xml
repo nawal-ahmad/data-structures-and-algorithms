@@ -4,11 +4,77 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d46fc7f8-45a0-4c01-804d-8a62056355eb" name="Changes" comment="" />
+    <list default="true" id="d46fc7f8-45a0-4c01-804d-8a62056355eb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../TreesIntersection/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TreesIntersection/TreeItersection.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-left-join/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-left-join/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-left-join/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-left-join/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-left-join/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-left-join/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-left-join/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-left-join/lib/src/main/java/hashmap/left/join/LeftJoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-repeated-word/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-repeated-word/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-repeated-word/lib/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-repeated-word/lib/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-repeated-word/lib/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-repeated-word/lib/bin/main/hashmap/repeated/word/Library.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-repeated-word/lib/bin/main/hashmap/repeated/word/RepeatedWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashmap-repeated-word/lib/bin/test/hashmap/repeated/word/LibraryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashtable/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashtable/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashtable/lib/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashtable/lib/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashtable/lib/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashtable/lib/bin/main/hashtable/HashNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashtable/lib/bin/main/hashtable/HashTable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashtable/lib/bin/main/hashtable/Library.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hashtable/lib/bin/test/hashtable/LibraryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bin/main/trees/structure/TreeIntersection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/trees/structure/HashNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/trees/structure/HashTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/trees/structure/TreeIntersection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../allDataRev/src/main/java/LinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../allDataRev/src/main/java/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hashmap-repeated-word/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hashmap-repeated-word/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hashmap-repeated-word/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../hashmap-repeated-word/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hashtable/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hashtable/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insertion-sort/lib/bin/main/insertion/sort/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insertion-sort/lib/bin/main/insertion/sort/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insertion-sort/lib/src/main/java/insertion/sort/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insertion-sort/lib/src/main/java/insertion/sort/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/trees/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/trees/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/trees/structure/BinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/trees/structure/BinaryTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/trees/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/classes/java/main/trees/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/trees/structure/BinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/classes/java/main/trees/structure/BinaryTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/structure/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/structure/BinaryTree.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">

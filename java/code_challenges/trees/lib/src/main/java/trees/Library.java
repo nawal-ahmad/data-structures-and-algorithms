@@ -7,45 +7,36 @@ import trees.data.BTNode;
 import trees.structure.BinarySearchTree;
 import trees.structure.BinaryTree;
 
+import java.util.Arrays;
+
+import static trees.structure.TreeIntersection.treeIntersection;
+
 public class Library {
   public boolean someLibraryMethod() {
     return true;
   }
 
   public static void main(String[] args) {
+    treeMaxSimulator();
+    binaryTreeSimulator();
+    fizzBuzzSimulator();
+    treeIntersectionSimulator();
+  }
+
+
+  public static void treeMaxSimulator(){
     BinarySearchTree bt = new BinarySearchTree();
     bt.add(5);
     bt.add(9);
     bt.add(15);
     bt.add(88);
     bt.add(45);
-    bt.add(8);
+
+    System.out.println("==================================\n");
+    System.out.println("Summation :" + bt.summation()+"\n");
+    System.out.println("===================================");
+
     System.out.println(bt.maximum());
-    System.out.println("==================================");
-    System.out.println("Summation :" + bt.summation());
-    BinaryTree binaryTree = new BinaryTree();
-    binaryTreeSimulator();
-    System.out.println("===============================================");
-
-    KaryTree Tree = new KaryTree(4);
-    KNode root = new KNode("10");
-
-    KNode node1 = new KNode("7");
-    KNode node2 = new KNode("88");
-    KNode node3 = new KNode("45");
-    KNode node4 = new KNode("8");
-    KNode node5 = new KNode("13");
-    KNode node6 = new KNode("20");
-
-    Tree.root = root;
-
-    root.children.add(node1);
-    root.children.add(node2);
-    node1.children.add(node3);
-    node2.children.add(node4);
-    node2.children.add(node5);
-    node2.children.add(node6);
-    System.out.println(Tree.fizzBuzz(Tree));
   }
 
   private static void binaryTreeSimulator() {
@@ -56,7 +47,51 @@ public class Library {
     binaryTree.getRoot().getLeft().setLeft(new BTNode("A"));
     binaryTree.getRoot().getLeft().setRight(new BTNode("L"));
 
-    System.out.println("========================================================'");
     binaryTree.BreadthFirst();
+    System.out.println("\n=====================================\n");
   }
+
+  public static void fizzBuzzSimulator(){
+    KaryTree Tree = new KaryTree(4);
+    KNode root = new KNode("10");
+    KNode node1 = new KNode("7");
+    KNode node2 = new KNode("88");
+    KNode node3 = new KNode("45");
+    KNode node4 = new KNode("8");
+    KNode node5 = new KNode("13");
+    KNode node6 = new KNode("20");
+
+    Tree.root = root;
+    root.children.add(node1);
+    root.children.add(node2);
+    node1.children.add(node3);
+    node2.children.add(node4);
+    node2.children.add(node5);
+    node2.children.add(node6);
+    System.out.println(Tree.fizzBuzz(Tree));
+  }
+
+
+  public static void treeIntersectionSimulator(){
+    BinaryTree<Integer> tree1 = new BinaryTree<>();
+    tree1.root = new BTNode<>(20);
+    tree1.root.left = new BTNode<>(10);
+    tree1.root.right = new BTNode<>(30);
+    tree1.root.right.right = new BTNode<>(40);
+    tree1.root.right.left = new BTNode<>(35);
+    tree1.root.left.left = new BTNode<>(5);
+    tree1.root.left.right = new BTNode<>(15);
+
+    BinaryTree<Integer> tree2 = new BinaryTree<>();
+    tree2.root = new BTNode<>(30);
+    tree2.root.left = new BTNode<>(20);
+    tree2.root.right = new BTNode<>(40);
+    tree2.root.right.right = new BTNode<>(50);
+    tree2.root.right.left = new BTNode<>(35);
+    tree1.root.left.left = new BTNode<>(15);
+    tree1.root.left.right = new BTNode<>(25);
+
+    System.out.println(Arrays.toString(treeIntersection(tree1, tree2)));
+  }
+
 }

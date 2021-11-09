@@ -21,6 +21,8 @@ public class Library {
     System.out.println(Arrays.toString(mergeSort(arr)));
 
     /// Code challenge 28
+    int [] array={17,44,5,22,54,6,29,3,13};
+    quickSort(array,0,8);
     System.out.println(Arrays.toString(quickSort(arr, 0, 5)));
   }
 }

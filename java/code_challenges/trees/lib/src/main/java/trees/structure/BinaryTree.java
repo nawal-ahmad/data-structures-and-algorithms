@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 
 public class BinaryTree<T> {
-  BTNode<T> root;
+  public BTNode<T> root;
   ArrayList<T> preOrderList = new ArrayList<>();
   ArrayList<T> inOrderList = new ArrayList<>();
   ArrayList<T> postOrderList = new ArrayList<>();
