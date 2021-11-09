@@ -19,4 +19,5 @@
 | insertion-sort             | [insertion-sort](code_challenges/insertion-sort) |
 | hashtable                  | [hashtable](code_challenges/hashtable/lib/src/main/java)|
 | hashmap-repeated-word      | [hashmap-repeated-word](code_challenges/hashmap-repeated-word/README.md)| 
-| Tree Intersection          | [Tree-Intersection](code_challenges/TreesIntersection/README.md)
+| Tree Intersection          | [Tree-Intersection](code_challenges/TreesIntersection/README.md)| 
+| Hashmap Left Join          | [Hashmap Left Join](code_challenges/TreesIntersection/README.md)

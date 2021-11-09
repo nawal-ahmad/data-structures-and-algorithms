@@ -33,7 +33,5 @@ public class Library {
     hashmap2.put("flow", "jam");
 
     System.out.println(LeftJoin.leftJoin(hashmap1 , hashmap2));
-//    System.out.println("Should equal"+ resultlt.leftJoinin(hashmap1, hashmap2));
-
   }
 }
