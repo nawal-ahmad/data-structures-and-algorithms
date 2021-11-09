@@ -14,4 +14,4 @@ Implement a simplified LEFT JOIN for 2 Hashmaps into a single data structure.
  - Space complexity: O(n)
 
 ## Code
-[Hashmap Repeated code](lib/src/main/java/hashmap/left/join/LeftJoin.java)
+[Hashmap left join](lib/src/main/java/hashmap/left/join/LeftJoin.java)
