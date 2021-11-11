@@ -3,9 +3,7 @@
  */
 package hashmap.left.join;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.function.Supplier;
 
 public class Library {
@@ -14,24 +12,59 @@ public class Library {
     }
 
   public static void main(String[] args) {
-    HashMap<String, String> hashmap1 = new HashMap<>();
-    HashMap<String, String> hashmap2 = new HashMap<>();
+//    HashMap<String, String> hashmap1 = new HashMap<>();
+//    HashMap<String, String> hashmap2 = new HashMap<>();
+//
+//    List<String> result = new ArrayList<>();
+//
+//    hashmap1.put("fond", "enamored");
+//    hashmap1.put("wrath", "anger");
+//    hashmap1.put("diligent", "employed");
+//    hashmap1.put("outfit", "garb");
+//    hashmap1.put("guide", "usher");
+//
+//
+//    hashmap2.put("fond", "averse");
+//    hashmap2.put("wrath", "delight");
+//    hashmap2.put("diligent", "idle");
+//    hashmap2.put("guide", "follow");
+//    hashmap2.put("flow", "jam");
+//
+//    System.out.println(LeftJoin.leftJoin(hashmap1 , hashmap2));
+//
+//    String [] input = {"Algorithms", "String", "Integer", "Integer",
+//      "Algorithms", "String", "Integer",
+//      "Algorithms", "String", "Algorithms"};
+//    findFrequentWord(input);
+//    System.out.println("Most frequent word: " + findFrequentWord(input));
 
-    List<String> result = new ArrayList<>();
+    String str = "a a baac de fg hij";
+    LeftJoin.findFrequentWord(str);
 
-    hashmap1.put("fond", "enamored");
-    hashmap1.put("wrath", "anger");
-    hashmap1.put("diligent", "employed");
-    hashmap1.put("outfit", "garb");
-    hashmap1.put("guide", "usher");
-
-
-    hashmap2.put("fond", "averse");
-    hashmap2.put("wrath", "delight");
-    hashmap2.put("diligent", "idle");
-    hashmap2.put("guide", "follow");
-    hashmap2.put("flow", "jam");
-
-    System.out.println(LeftJoin.leftJoin(hashmap1 , hashmap2));
+    LeftJoin.unique(str);
   }
-}
+
+//    public static String findFrequentWord(String [] input) {
+//
+//      System.out.println("Input: " + Arrays.toString(input));
+//      Map<String, Integer> map = new HashMap<>();
+//
+//      for (int i = 0; i < input.length; i++) {
+//        String word = input[i];
+//        int count = map.getOrDefault(word, 0);
+//        map.put(word, count + 1);
+//      }
+//      String frequentWord = null;
+//      int count = 0;
+//      for (String key : map.keySet()) {
+//        if (count < map.get(key)) {
+//          count = map.get(key);
+//          frequentWord = key;
+//        }
+//      }
+//      return frequentWord;
+//    }
+//
+
+
+  }

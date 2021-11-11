@@ -38,6 +38,6 @@ class LibraryTest {
     list.add("fond: enamored, averse");
 
     assertEquals(list, LeftJoin.leftJoin(hashmap1, hashmap2));
-
   }
+
 }
