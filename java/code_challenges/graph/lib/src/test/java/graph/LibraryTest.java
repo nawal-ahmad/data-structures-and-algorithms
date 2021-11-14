@@ -8,25 +8,25 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
 
-  @Test void AddNodeTest(){
+  @Test void addVertexTest(){
     Graph graph = new Graph();
-    graph.addNode("Sudoku");
-    graph.addNode("chess");
-    graph.addNode("Pubg");
-    assertEquals(graph.getNodes(), graph.getNodes());
+    graph.addVertex("Sudoku");
+    graph.addVertex("chess");
+    graph.addVertex("Pubg");
+    assertEquals(graph.getVertex(), graph.getVertex());
   }
 
   @Test void AddEdgeTest(){
     Graph graph = new Graph();
-    graph.addNode("Sudoku");
-    graph.addNode("chess");
-    graph.addNode("Pubg");
+    graph.addVertex("Sudoku");
+    graph.addVertex("chess");
+    graph.addVertex("Pubg");
 
     graph.addEdge("Sudoku", "chess");
     graph.addEdge("Sudoku", "Pubg");
     graph.addEdge("Sudoku", "Sudoku");
     graph.addEdge("chess", "Pubg");
-    assertEquals("[Vertex{label='Sudoku', weight=0}, Vertex{label='chess', weight=0}, Vertex{label='Pubg', weight=0}]",graph.getNodes().toString());
+    assertEquals("[Vertex{label='Sudoku', weight=0}, Vertex{label='chess', weight=0}, Vertex{label='Pubg', weight=0}]",graph.getVertex().toString());
   }
 
   @Test

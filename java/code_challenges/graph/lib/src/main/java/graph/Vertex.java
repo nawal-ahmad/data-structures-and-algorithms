@@ -2,16 +2,16 @@ package graph;
 
 import java.util.Objects;
 
-public class Vertices {
+public class Vertex {
 
   public String data;
   public int weight ;
 
-  public Vertices(String data) {
+  public Vertex(String data) {
     this.data = data;
   }
 
-  public Vertices(String data, int weight) {
+  public Vertex(String data, int weight) {
     this.data = data;
     this.weight = weight;
   }
@@ -28,7 +28,7 @@ public class Vertices {
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-    Vertices vertex = (Vertices) o;
+    Vertex vertex = (Vertex) o;
     return Objects.equals(data, vertex.data);
   }
 
