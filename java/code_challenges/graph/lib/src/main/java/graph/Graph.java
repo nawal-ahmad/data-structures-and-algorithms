@@ -6,6 +6,7 @@ import java.util.*;
 public class Graph {
 
   private final Map<Vertex, List<Vertex>> adjacentVertex;
+  public Map<String, Integer> weightList = new HashMap<>();
 
   public Graph() {
     this.adjacentVertex =  new HashMap<>();;
@@ -64,5 +65,54 @@ public class Graph {
     System.out.print(list.get(i).data);
     return list;
   }
+
+  public void addEdge(String Value1, String value2, int weight) {
+    Vertex NewNode1 = new Vertex(Value1);
+    Vertex NewNode2 = new Vertex(value2);
+
+    adjacentVertex.get(NewNode1).add(NewNode2);
+    adjacentVertex.get(NewNode2).add(NewNode1);
+    weightList.put(Value1 +value2 , weight);
+    weightList.put(value2 + Value1 , weight);
+  }
+
+//  public void addEdge(String value1, String value2, int weight) {
+//    Vertex vertex1 = new Vertex(value1);
+//    if (value1.equals(value2)) {
+//      adjacentVertex.get(vertex1).add(vertex1);
+//      weightList.put(value1 + "->" + value1, 0);
+//    } else {
+//      Vertex vertex2 = new Vertex (value2);
+//      adjacentVertex.get(vertex1).add(vertex2);
+//      adjacentVertex.get(vertex2).add(vertex1);
+//      weightList.put(value1 + "->" + value2, weight);
+//      weightList.put(value2 + "->" + value1, weight);
+//    }
+//  }
+
+
+  public String businessTrip(String [] cities) {
+    int cost = 0;
+    for (int i = 0; i < cities.length -1; i++) {
+      if (getNeighbors(cities[i]).contains(new Vertex(cities[i+1]))) {
+        cost += weightList.get(cities[i] +cities[i+1]);
+      } else {
+        return "False,$0";
+      }
+    }
+    return "True"+",$" + cost ;
+  }
+
+//  public String businessTrip(String value, String[] arr) {
+//    int cost = 0;
+//    for (int i = 0; i < arr.length - 1; i++) {
+//      if (getNeighbors(arr[i]).contains(new Vertex(arr[i + 1]))) {
+//        cost += weightList.get(arr[i] + "->" + arr[i + 1]);
+//      } else {
+//        return "False, $0";
+//      }
+//    }
+//    return true + ", $" + cost;
+//  }
 
 }
