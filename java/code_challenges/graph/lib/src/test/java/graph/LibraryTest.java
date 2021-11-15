@@ -34,4 +34,25 @@ class LibraryTest {
     Graph graph = new Graph();
     assertEquals(0,graph.size());
   }
+
+  @Test void BreadthFirstTest(){
+    Graph BreadthFirst = new Graph();
+    Vertex a = BreadthFirst.addVertex("Pandora");
+    Vertex b =  BreadthFirst.addVertex("Arendelle");
+    Vertex c = BreadthFirst.addVertex("Metroville");
+    Vertex d = BreadthFirst.addVertex("Monstropolis");
+    Vertex e = BreadthFirst.addVertex("Narnia");
+    Vertex f = BreadthFirst.addVertex("Naboo");
+
+    BreadthFirst.addEdge("Pandora","Arendelle");
+    BreadthFirst.addEdge("Arendelle","Metroville");
+    BreadthFirst.addEdge("Arendelle","Monstropolis");
+    BreadthFirst.addEdge("Metroville","Narnia");
+    BreadthFirst.addEdge("Metroville","Naboo");
+    BreadthFirst.addEdge("Monstropolis","Naboo");
+    BreadthFirst.addEdge("Narnia","Naboo");
+
+    assertEquals("[Vertex{label='Pandora', weight=0}, Vertex{label='Arendelle', weight=0}, Vertex{label='Metroville', weight=0}, Vertex{label='Monstropolis', weight=0}, Vertex{label='Narnia', weight=0}, Vertex{label='Naboo', weight=0}]",BreadthFirst.breadthFirst(a).toString());
+
+  }
 }

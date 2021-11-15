@@ -39,3 +39,19 @@ add new edge between two nodes in the graph If specified, assign a weight to the
 
 **size**: this method returns the size of the graph HashSet.
 
+
+# Graphs Breadth-first
+
+## Challenge
+write a method to traverse a graph using breadth-first
+
+input -> Node
+
+output -> A collection of nodes in the order they were visited.
+
+## Whiteboard Process
+![breadth-first](breadth-first.jpg)
+
+## Approach & Efficiency
+- time : O(n^2) - nested loop
+- space : O(n) - create new list and Set.
