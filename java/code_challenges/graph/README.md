@@ -70,3 +70,19 @@ output -> cost or null
 ## Approach & Efficiency
 - time : O(n) - loop.
 - space : O(1) - no extra space.
+
+# Graphs Depth-first
+
+## Challenge
+write a method to traverse a graph using depth-first
+
+input -> Node
+output -> A collection of nodes in their pre-order depth-first traversal order.
+
+## Whiteboard Process
+![depth-first](depth-first.jpg)
+
+## Approach & Efficiency
+time : O(n^2) - nested loop
+scape : O(n) - create new list and Set and stack.
+

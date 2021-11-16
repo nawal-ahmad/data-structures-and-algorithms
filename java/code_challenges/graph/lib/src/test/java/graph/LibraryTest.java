@@ -3,12 +3,15 @@
  */
 package graph;
 
+
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LibraryTest {
 
-  @Test void addVertexTest(){
+  @Test
+  void addVertexTest(){
     Graph graph = new Graph();
     graph.addVertex("Sudoku");
     graph.addVertex("chess");
@@ -53,6 +56,30 @@ class LibraryTest {
     BreadthFirst.addEdge("Narnia","Naboo");
 
     assertEquals("[Vertex{label='Pandora', weight=0}, Vertex{label='Arendelle', weight=0}, Vertex{label='Metroville', weight=0}, Vertex{label='Monstropolis', weight=0}, Vertex{label='Narnia', weight=0}, Vertex{label='Naboo', weight=0}]",BreadthFirst.breadthFirst(a).toString());
+  }
 
+  @Test void depthFirst() {
+
+    Graph graph = new Graph();
+    Vertex a = graph.addVertex("A");
+    Vertex b =  graph.addVertex("B");
+    Vertex c = graph.addVertex("C");
+    Vertex d = graph.addVertex("D");
+    Vertex e = graph.addVertex("E");
+    Vertex f = graph.addVertex("F");
+    Vertex g = graph.addVertex("G");
+    Vertex h = graph.addVertex("H");
+
+    graph.addEdge("A","B");
+    graph.addEdge("A","D");
+    graph.addEdge("B","C");
+    graph.addEdge("B","D");
+    graph.addEdge("C","G");
+    graph.addEdge("D","E");
+    graph.addEdge("D","H");
+    graph.addEdge("D","F");
+    graph.addEdge("F","H");
+
+    assertEquals("[A, D, F, H, E, B, C, G]" , graph.depthFirst(a).toString());
   }
 }

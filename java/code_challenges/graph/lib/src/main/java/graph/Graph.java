@@ -88,4 +88,31 @@ public class Graph {
     return "True"+",$" + cost ;
   }
 
+  public List<Vertex> depthFirst(Vertex root) {
+    if (root == null) return null;
+
+    List<Vertex> vertices = new ArrayList<>();
+    Stack depth = new Stack();
+    Set<Vertex> visited = new HashSet<>();
+
+    depth.push(root);
+
+    while (!depth.isEmpty()) {
+      Vertex top = (Vertex) depth.pop();
+      if (!visited.contains(top)) {
+        visited.add(top);
+        vertices.add(top);
+        for (Vertex neighbor : getNeighbors(top.data)) {
+          depth.push(neighbor);
+        }
+      }
+    }
+    return vertices;
+  }
+
+  @Override
+  public String toString() {
+    if (adjacentVertex.isEmpty()) return null;
+    return "" + adjacentVertex;
+  }
 }

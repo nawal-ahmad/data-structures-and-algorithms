@@ -10,6 +10,11 @@ public class Library {
   }
 
   public static void main(String[] args) {
+    BreadthFirstTest();
+    businessTripTest();
+    depthFirstTest();
+  }
+  public static void BreadthFirstTest() {
     Graph BreadthFirst = new Graph();
     Vertex a = BreadthFirst.addVertex("Pandora");
     Vertex b = BreadthFirst.addVertex("Arendelle");
@@ -29,7 +34,9 @@ public class Library {
     System.out.println("\nBreadth First Start with Vertex" + " 'Pandora'" + ":");
     BreadthFirst.breadthFirst(a);
     System.out.println("\n\n");
+  }
 
+  public static void businessTripTest(){
     Graph businessTrip = new Graph();
     Vertex first = businessTrip.addVertex("Pandora");
     Vertex second = businessTrip.addVertex("Arendelle");
@@ -57,6 +64,31 @@ public class Library {
     System.out.println("\n Trip2 = {\"Arendelle\" , \"Monstropolis\", \"Naboo\"}\n" + businessTrip.businessTrip(trip2));
     System.out.println("\n Trip3 = {\"Naboo\" , \"Pandora\"} \n" + businessTrip.businessTrip(trip3));
     System.out.println("\n Trip4 = {\"Narnia\" , \"Arendelle\", \"Naboo\"}\n" + businessTrip.businessTrip(trip4));
+  }
+
+  public static void depthFirstTest(){
+    System.out.println("\n+===================================================Depth First==========================================+\n");
+    Graph graph = new Graph();
+    Vertex a = graph.addVertex("A");
+    Vertex b =  graph.addVertex("B");
+    Vertex c = graph.addVertex("C");
+    Vertex d = graph.addVertex("D");
+    Vertex e = graph.addVertex("E");
+    Vertex f = graph.addVertex("F");
+    Vertex g = graph.addVertex("G");
+    Vertex h = graph.addVertex("H");
+
+    graph.addEdge("A","B");
+    graph.addEdge("A","D");
+    graph.addEdge("B","C");
+    graph.addEdge("B","D");
+    graph.addEdge("C","G");
+    graph.addEdge("D","E");
+    graph.addEdge("D","H");
+    graph.addEdge("D","F");
+    graph.addEdge("F","H");
+
+    System.out.println("depth first 38 => Out put: "+graph.breadthFirst(a).toString());
 
   }
 }
