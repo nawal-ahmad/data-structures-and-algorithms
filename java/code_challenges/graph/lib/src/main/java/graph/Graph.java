@@ -26,6 +26,16 @@ public class Graph {
     adjacentVertex.get(vertex2).add(vertex1);
   }
 
+  public void addEdgeW(String Value1, String value2, int weight) {
+    Vertex NewNode1 = new Vertex(Value1);
+    Vertex NewNode2 = new Vertex(value2);
+
+    adjacentVertex.get(NewNode1).add(NewNode2);
+    adjacentVertex.get(NewNode2).add(NewNode1);
+    weightList.put(Value1 +value2 , weight);
+    weightList.put(value2 + Value1 , weight);
+  }
+
   public Set<Vertex> getVertex(){
     return adjacentVertex.keySet();
   }

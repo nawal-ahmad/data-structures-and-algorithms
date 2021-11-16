@@ -80,6 +80,6 @@ class LibraryTest {
     graph.addEdge("D","F");
     graph.addEdge("F","H");
 
-    assertEquals("[A, D, F, H, E, B, C, G]" , graph.depthFirst(a).toString());
+    assertEquals("[Vertex{label='A', weight=0}, Vertex{label='D', weight=0}, Vertex{label='F', weight=0}, Vertex{label='H', weight=0}, Vertex{label='E', weight=0}, Vertex{label='B', weight=0}, Vertex{label='C', weight=0}, Vertex{label='G', weight=0}]" , graph.depthFirst(a).toString());
   }
 }
